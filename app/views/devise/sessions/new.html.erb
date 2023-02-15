@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="welcome">
+    <div class="pinkbox" >
+      <div class="signup nodisplay">
+        <h1>register</h1>
+        <%= form_with model: @user, url: user_registration_path, method: :post, local: true do |f| %>
+        <div class="input">
+          <%= f.text_field :nickname, id:"nickname", placeholder:"nickname" %>
+        </div>
+        <div class="input">
+          <%= f.text_field :email, id:"email", placeholder:"email" %>
+        </div>
+        <div class="input">
+          <%= f.text_field :password, id:"password", placeholder:"password" %>
+        </div>
+          <button class="button submit">logincreate account</button>
+        <% end %>
+      </div>
+      <div class="signin">
+        <h1>signin</h1>
+        <%= form_with model: @user, url: user_session_path, method: :post, local: true do |f| %>
+        <div class="input">
+          <%= f.text_field :email, id:"email", placeholder:"email" %>
+        </div>
+        <div class="input">
+          <%= f.text_field :password, id:"password", placeholder:"password" %>
+        </div>
+          <button class="button submit">signin</button>
+        <% end %>
+      </div>
+    </div>
+    <div class="leftbox">
+      <h2 class="title"><span>BLOOM</span>&<br>BOUQUET</h2>
+      <p class="desc">pick your perfect <span>bouquet</span></p>
+      <img class="flower smaller" src="https://image.ibb.co/d5X6pn/1357d638624297b.jpg" alt="1357d638624297b" border="0">
+      <p class="account">have an account?</p>
+      <button class="button" id="signin">login</button>
+    </div>
+    <div class="rightbox">
+      <h2 class="title"><span>BLOOM</span>&<br>BOUQUET</h2>
+      <p class="desc"> pick your perfect <span>bouquet</span></p>
+      <img class="flower" src="https://preview.ibb.co/jvu2Un/0057c1c1bab51a0.jpg"/>
+      <p class="account">don't have an account?</p>
+      <button class="button" id="signup">signup</button>
+    </div>
+  </div>
+ </div>
+
+</div>
