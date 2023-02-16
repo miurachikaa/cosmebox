@@ -24,10 +24,6 @@ body {
     height: 55px;
   }
   
-  header img{
-    width: 180px;
-  }
-  
   .search {
     width: 100%;
     position: relative;
@@ -152,30 +148,11 @@ body {
   .dropdown_content:hover{
     margin: 0px;
   }
-  /*end*/
   
   section{
     margin-top: 160px;
   }
   
-  /*Banner*/
-  .banner-container{
-    width: 96vw;
-    height: 40%;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .banner-slide{
-    display: flex;
-    width: 100%;
-    height: 40%;
-  }
-  
-  .banner-slide img{
-    width: 102%;
-  }
       
   /*RANKING*/
   .btn{
@@ -262,6 +239,4 @@ body {
     color: #f4b5b6;
   }
   
-  /*footer*/
-    
   
