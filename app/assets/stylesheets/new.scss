@@ -1,5 +1,5 @@
 .box {
-  width: 500px;
+  width: 650px;
   height: 500px;
   border-radius: 5px;
   box-shadow: 2px 0 10px rgba(0,0,0,.1);
@@ -61,3 +61,90 @@ width: 87%;
 font-size: 12px;
 margin: 0;
 }
+
+
+
+
+/*index
+/*product*/
+.pro{
+  display: flex;
+  margin: auto;
+  width: 650px;
+  height: 500px;
+
+  border-radius: 5px;
+  box-shadow: 2px 0 10px rgba(0,0,0,.1);
+  background-color: #f6f6f6;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-name{
+  font-family: 'Open Sans', sans-serif;
+  color: #7d7d82;
+  margin-left: 25px;
+}
+
+.product-name a{
+  color: #7d7d82;
+}
+
+.product-rank{
+  display: block;
+  color: #f4b5b6;
+  margin: 25px;
+}
+
+.product-image{
+  width: 200px;
+  height: 300px;
+  margin: 20px;
+
+}
+
+.product-info{
+  flex-grow: 1;
+}
+
+.name{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.brand{
+  font-size: 15px;
+}
+
+.price{
+  margin-top: 0px;
+}
+
+/*button*/
+.button {
+  border: none;
+  border-radius: 10px;
+  color: #a9b7af;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button {
+  background-color: white; 
+  color: #a9b7af; 
+  border: 3px solid #a9b7af;
+  margin-left: 25px;
+}
+
+.button:hover {
+  background-color: #a9b7af;
+  color: white;
+}
+

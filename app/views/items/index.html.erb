@@ -60,6 +60,8 @@
     <% @items.each do |item| %>
 
       <div class="products">
+      <%= link_to item_path(item.id) do %>
+
         <div class="product">
 
           <%= image_tag "Perfume.png", class:"image" %>
@@ -69,8 +71,12 @@
           <div class="name">
           <%= item.name %>
           </div>
+
         </div>
+        <% end %>
+
       </div>
+
     <% end %>
     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
   </div>
