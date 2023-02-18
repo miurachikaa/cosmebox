@@ -1,5 +1,4 @@
 <header>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
   <div class="wrap">
     <div class="search">
     <input type="text" class="searchTerm" placeholder="Search">
@@ -13,67 +12,69 @@
   </div>
 </header>
 
-<nav>
-    <div class="dropdown">
-    <a class="dropbtn">Base</a>
-    <div class="dropdown_content">
-      <a div="nav_link">
-      <a href="items/foundation.html">Foundation</a>
-      </a>
-      <a div="nav_link">
-      <a href="items/concealer.html">Concealer</a>
-      </a>
-      <a div="nav_link">
-      <a href="items/powder.html">Powder</a>
-      </a>
+  <nav>
+      <div class="dropdown">
+      <a class="dropbtn">Base</a>
+      <div class="dropdown_content">
+        <a div="nav_link">
+        <a href="items/foundation.html">Foundation</a>
+        </a>
+        <a div="nav_link">
+        <a href="items/concealer.html">Concealer</a>
+        </a>
+        <a div="nav_link">
+        <a href="items/powder.html">Powder</a>
+        </a>
+      </div>
     </div>
-  </div>
-    <div class="dropdown">
-    <a href="items/eyebrow.html", class="dropbtn">Eyebrow</a>
-  </div>
-    <div class="dropdown">
-    <a class="dropbtn">Eye</a>
-    <div class="dropdown_content">
-      <a div="nav_link">
-      <a href="items/foundation.html">Eyeliner</a>
-      </a>
-      <a div="nav_link">
-      <a href="items/concealer.html">Eyeshadow</a>
-      </a>
-      <a div="nav_link">
-      <a href="items/powder.html">Mascara</a>
-      </a>
+      <div class="dropdown">
+      <a href="items/eyebrow.html", class="dropbtn">Eyebrow</a>
     </div>
-  </div>
-    <div class="dropdown">
-    <a href="items/lip.html", class="dropbtn">Lip</a>
-  </div>
-    <div class="dropdown">
-    <a href="items/lip.html", class="dropbtn">Cheek</a>
-  </div>
-</nav>
+      <div class="dropdown">
+      <a class="dropbtn">Eye</a>
+      <div class="dropdown_content">
+        <a div="nav_link">
+        <a href="items/foundation.html">Eyeliner</a>
+        </a>
+        <a div="nav_link">
+        <a href="items/concealer.html">Eyeshadow</a>
+        </a>
+        <a div="nav_link">
+        <a href="items/powder.html">Mascara</a>
+        </a>
+      </div>
+    </div>
+      <div class="dropdown">
+      <a href="items/lip.html", class="dropbtn">Lip</a>
+    </div>
+      <div class="dropdown">
+      <a href="items/lip.html", class="dropbtn">Cheek</a>
+    </div>
+  </nav>
 
 <section>
-<span>
-<%= link_to "New Cosme + ",new_item_path, method: :get, class: 'btn'  %>
-</span>
-    <div class="rank">
-  <% @items.each do |item| %>
+  <span>
+    <%= link_to "New Cosme + ",new_item_path, method: :get, class: 'btn'  %>
+  </span>
+  <div class="rank">
+    <% @items.each do |item| %>
 
       <div class="products">
-      <div class="product">
+        <div class="product">
 
-        <%= image_tag "Perfume.png", class:"image" %>
-        <div class="brand">
-        <%= item.brand %>
+          <%= image_tag "Perfume.png", class:"image" %>
+          <div class="brand">
+          <%= item.brand %>
+          </div>
+          <div class="name">
+          <%= item.name %>
+          </div>
         </div>
-        <div class="name">
-        <%= item.name %>
       </div>
+    <% end %>
+    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
   </div>
-  </div>
+</section>
 
-  <% end %>
-  </div>
 
 

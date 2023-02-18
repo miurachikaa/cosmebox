@@ -1,15 +1,5 @@
-$gray: #8E9AAF;
-$lavender: #CBC0D3;
-$pale: #EAC7CC;
-$white: #f6f6f6;
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora');
-$sans-serif: 'Open Sans', sans-serif;
-$serif: 'Lora', serif;
-
-
-
 .box {
-  width: 320px;
+  width: 500px;
   height: 500px;
   border-radius: 5px;
   box-shadow: 2px 0 10px rgba(0,0,0,.1);
@@ -18,45 +8,56 @@ $serif: 'Lora', serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  }  
-  
-  h2 {
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    color: #EAC7CC;
-    font-size: 2em;
-    letter-spacing: 8px;
-  }
+}  
 
-  h5 {
-    margin: 15px 0 0 50px;
-    color: grey;
-    padding: 0;
-    line-height: 0.05em;
-  }
-  
-  .input {
-    width: 55%;
-    padding: 5px;
-    margin:  0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .selectbox {
-    width: 60%;
-    margin: 0 ;
-    color: grey;
-    font-size: 12px;
-    cursor: pointer;
-  }
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #EAC7CC;
+  font-size: 2em;
+  letter-spacing: 8px;
+}
 
-  
-  .text {
-  width: 55%;
+h5 {
+  margin: 15px 0 0 0;
+  color: grey;
+  padding: 0;
+  line-height: 0.05em;
+  text-align: left;
+}
+
+.cosmeinfo{
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.inputbox {
   display: flex;
   justify-content: center;
-  margin: 0 53px 0 55px ;
+  padding: 5px;    
+}
 
-  }
+.selectb {
+  width: 90%;
+  margin: 0 ;
+  color: grey;
+  font-size: 12px;
+  margin: 0 5px 0 0 ;
+}
+
+.selectbox {
+  width: 100%;
+  margin: 0 -10px 0 0;
+  color: grey;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+textarea {
+width: 87%;
+font-size: 12px;
+margin: 0;
+}

@@ -1,26 +1,26 @@
-  <div class="box" >
-    <div class="content" >
-      <h2>New Cosme</h2>
-      <%= form_with model: @item, url: items_path, method: :post, local: true do |f| %>      
-      <h5>Brand</h5><p>
-      <div class="input">
-        <span class="required">*</span><%= f.text_field :brand, id:"brand", placeholder:"ex.) LUNASOL" %>
-      </div>
-      <h5>Category</h5><p>
-
-      <div class="input">
-        <span class="required">*</span><%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"selectbox"}) %>
-      </div>
-      <h5>Name</h5><p>
-      <div class="input">
-        <span class="required">*</span><%= f.text_field :name, id:"name", placeholder:"ex.) eye coloration" %>
-      </div>
-      <h5>Memo</h5><p>
-      <div class="text">
-        <%= f.text_area :memo, id:"memo" %>
-      </div>
+<div class="box" >
+  <div class="content" >
+    <h2>New Cosme</h2>
+    <%= form_with model: @item, url: items_path, method: :post, local: true do |f| %>
+      <div class="cosmeinfo">
+        <h5>Brand</h5><p>
+        <div class="inputbox">
+          <span class="required">*</span><%= f.text_field :brand, id:"brand", placeholder:"ex.) LUNASOL" ,class:"selectb"%>
+        </div>
+        <h5>Category</h5><p>
+        <div class="input">
+          <span class="required">*</span><%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"selectbox"}) %>
+        </div>
+        <h5>Name</h5><p>
+        <div class="inputbox">
+          <span class="required">*</span><%= f.text_field :name, id:"name", placeholder:"ex.) eye coloration", class:"selectb" %>
+        </div>
+        <h5>Memo</h5><p>
+        <div class="memo">
+          <%= f.text_area :memo, id:"memo" %>
+        </div>
         <button class="button submit">logincreate account</button>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
-  
+</div>
