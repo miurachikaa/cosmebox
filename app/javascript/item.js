@@ -43,3 +43,5 @@ let button = document.getElementById('btn');
 button.onclick = butotnClick;
 
 bannerSlide.addEventListener('transitionend', transition);
+
+

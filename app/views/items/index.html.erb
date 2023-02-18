@@ -1,116 +1,79 @@
-  <body>
-    <header>
-      <div class="wrap">
-        <div class="search">
-        <input type="text" class="searchTerm" placeholder="Search">
-          <button type="submit" class="searchButton">
-            <i class="fa fa-search"></i>
-          </button>
-        </div>
-      </div>
-      <div class="user">
-      <i class="fa fa-user-circle-o fa-2x" style="color: #CBC0D3;"></i>
-      </div>
-    </header>
-    
-    <nav>
-       <div class="dropdown">
-        <a class="dropbtn">Face</a>
-        <div class="dropdown_content">
-          <a div="nav_link">
-          <a href="items/foundation.html">foundation</a>
-          </a>
-          <a div="nav_link">
-          <a href="items/concealer.html">concealer</a>
-          </a>
-          <a div="nav_link">
-          <a href="items/powder.html">powder</a>
-          </a>
-        </div>
-      </div>
-       <div class="dropdown">
-        <a href="items/eyebrow.html", class="dropbtn">eyebrow</a>
-      </div>
-       <div class="dropdown">
-        <a class="dropbtn">eye</a>
-        <div class="dropdown_content">
-          <a div="nav_link">
-          <a href="items/foundation.html">eyeliner</a>
-          </a>
-          <a div="nav_link">
-          <a href="items/concealer.html">eyeshadow</a>
-          </a>
-          <a div="nav_link">
-          <a href="items/powder.html">mascara</a>
-          </a>
-        </div>
-      </div>
-       <div class="dropdown">
-        <a href="items/lip.html", class="dropbtn">lip</a>
-      </div>
-       <div class="dropdown">
-        <a href="items/lip.html", class="dropbtn">cheek</a>
-      </div>
-    </nav>
+<header>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+  <div class="wrap">
+    <div class="search">
+    <input type="text" class="searchTerm" placeholder="Search">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+  <div class="user">
+  <i class="fa fa-user-circle-o fa-2x" style="color: #CBC0D3;"></i>
+  </div>
+</header>
 
-    <section>
-          <span class="btn">New Cosme + </span>
+<nav>
+    <div class="dropdown">
+    <a class="dropbtn">Base</a>
+    <div class="dropdown_content">
+      <a div="nav_link">
+      <a href="items/foundation.html">Foundation</a>
+      </a>
+      <a div="nav_link">
+      <a href="items/concealer.html">Concealer</a>
+      </a>
+      <a div="nav_link">
+      <a href="items/powder.html">Powder</a>
+      </a>
+    </div>
+  </div>
+    <div class="dropdown">
+    <a href="items/eyebrow.html", class="dropbtn">Eyebrow</a>
+  </div>
+    <div class="dropdown">
+    <a class="dropbtn">Eye</a>
+    <div class="dropdown_content">
+      <a div="nav_link">
+      <a href="items/foundation.html">Eyeliner</a>
+      </a>
+      <a div="nav_link">
+      <a href="items/concealer.html">Eyeshadow</a>
+      </a>
+      <a div="nav_link">
+      <a href="items/powder.html">Mascara</a>
+      </a>
+    </div>
+  </div>
+    <div class="dropdown">
+    <a href="items/lip.html", class="dropbtn">Lip</a>
+  </div>
+    <div class="dropdown">
+    <a href="items/lip.html", class="dropbtn">Cheek</a>
+  </div>
+</nav>
 
-      <div id="rank-container">      
-        <div class="rank-product">
-          <div class="rank-image">
-            <a href=""><img src="https://botanistofficial.com/img/goods/S/btn318-d_27292c249b1d4c43913c9cba7d319e05.jpg" alt="Botanist-Botanical Shampoo and Treatment Bouncy Volume with the peony and orange blossom scent"/></a>
-          </div>
-          <div class="rank-info">
-            <div class="rank-name">
-              <a href=""><strong>Botanist</strong><br>Botanical Shampoo & Treatment Bouncy Volume</a>
-            </div>
-            <div class="rank-star">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star-half-o"></i>
-            </div>
-          </div>
+<section>
+<span>
+<%= link_to "New Cosme + ",new_item_path, method: :get, class: 'btn'  %>
+</span>
+    <div class="rank">
+  <% @items.each do |item| %>
+
+      <div class="products">
+      <div class="product">
+
+        <%= image_tag "Perfume.png", class:"image" %>
+        <div class="brand">
+        <%= item.brand %>
         </div>
-        <div class="rank-product">
-          <div class="rank-image">
-            <a href = "#"><img src="https://images-na.ssl-images-amazon.com/images/I/51U3j5k5OzL._SL1200_.jpg" alt="The Seaweed Bath brand - Hydrating, Natural Seaweed Body Wash"/></a>
-          </div>
-          <div class="rank-info">
-            <div class="rank-name">
-              <a href = ""><strong>The Seaweed Bath Co.</strong><br>Hydrating, Natural Seaweed Body Wash</a>
-            </div>
-            <div class="rank-star">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star-half-o"></i>
-            </div>
-          </div>
-        </div>
-        <div class="rank-product">
-          <div class="rank-image">
-            <a href = ""><img src="http://product.hstatic.net/1000036599/product/thefaceshop-rice-water-bright-cleansing-foam-300ml_4909cb32a4bc45c290f4f162cdd26f02_grande.png" alt="The Face Shop - Rice Water Bright Cleansing Foam"/></a>
-          </div>
-          <div class="rank-info">
-            <div class="rank-name">
-              <a href = ""><strong>The Face Shop</strong><br>Rice Water Bright<br>Cleansing Foam</a>
-            </div>
-            <div class="rank-star">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </div>
-          </div>
-        </div>
-     </div>
-    </section>
-    <footer>
-    </footer>
-  </body>  
-</html>
+        <div class="name">
+        <%= item.name %>
+      </div>
+  </div>
+  </div>
+
+  <% end %>
+  </div>
+
+

@@ -29,8 +29,7 @@ body {
     position: relative;
     display: flex;
     left: -10%;
-    
-  }
+    }
   
   .searchTerm {
     width: 30%;
@@ -40,8 +39,10 @@ body {
     height: 20px;
     border-radius: 10px 0 0 10px;
     outline: none;
-    color: #CBC0D3;
+    color: #7c8089;
     transform: translate(80%);
+    font-family: 'Quicksand', sans-serif;
+
   }
   
   .searchButton {
@@ -150,7 +151,7 @@ body {
   }
   
   section{
-    margin-top: 160px;
+    margin-top: 140px;
   }
   
       
@@ -159,13 +160,15 @@ body {
     cursor:pointer;
       position:relative;
       padding:10px 20px;
-      margin: 0 0 100px 30px;
       background:white;
       font-size:20px;
       border-top-right-radius:10px;
       border-bottom-left-radius:10px;
       transition:all 1s;
       color: #93939a;
+      margin: 30px;
+      font-family: 'Quicksand', sans-serif;
+
 
       &:after,&:before{
         content:" ";
@@ -200,28 +203,61 @@ body {
         }
       }
     }
-      
-  #rank-container{
-    display: flex;
-    justify-content: space-around;
-    height: 37%;
-    margin: 50px 0;
-    width: 100vw;
-  }
   
-  .rank-product{
+  
+  .rank{
     display: flex;
-    background-color: #fceeed;
-    padding: 20px;
-    width: 24%;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-items: flex-start;
+    padding: 0 100px;
+    flex-wrap: wrap;
+  }
+
+
+  .products {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    display: block;
+    margin: 30px ;
+    padding: 10px;
+    background-color: #fceeed;
+    height: 45vh;
+    width: 23vw;
   }
   
-  .rank-image img{
-    width: 100%;
+  .product {
+    background-color: white;
+    height: 42vh;
+    width: 21vw;
+    margin: 10px auto;
+
   }
+
+  .image{
+    height: 26vh;
+    width: 11vw;
+    margin: 10px;
+  }
+
+  .brand{
+    overflow-wrap: normal;
+    font-family: 'Open Sans', sans-serif;
+    color: #7c8089;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .name{
+    overflow-wrap: normal;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 19px;
+    -webkit-text-stroke: 1px #7c8089;
+    margin-top: 5px;
+
+    }
+
   
   .rank-name a{
     text-align: center;
@@ -233,10 +269,5 @@ body {
     text-decoration: none;
   }
   
-  .rank-star{
-    display: block;
-    text-align: center;
-    color: #f4b5b6;
-  }
   
   
