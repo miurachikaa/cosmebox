@@ -68,7 +68,7 @@ https://cosmebox.onrender.com/
 
 
 # ローカルでの動作方法
-以下のコマンドを順に実行。
+以下のコマンドを順に実行。<br>
 % git clone https://github.com/miurachikaa/cosmebox.git<br>
 % cd cosmebox<br>
 % bundle install<br>
