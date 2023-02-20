@@ -7,7 +7,7 @@ Cosme Box
 
 
 # URL
-※今後入力します。
+https://cosmebox.onrender.com/
 
 
 # テスト用アカウント
