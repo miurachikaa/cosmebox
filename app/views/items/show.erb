@@ -17,10 +17,11 @@
 
     <div class="buttons">
 
-      <button class="button2">
+      <button class="button2"><strong>
+
+        <%= link_to "edit", {controller: "items", action: "edit"}, {method: :get }%>
+      </strong></button>
       
-      <%= button_to "edit", {controller: "items", action: "edit"}, {method: :get }%>
-      </button>
       <button class="button2"><strong>delete</strong></button>
     </div>
   </div>

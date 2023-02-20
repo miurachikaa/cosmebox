@@ -82,6 +82,7 @@ margin: 0;
 display: flex;
 margin-top: 60px;
 margin-left: 100px;
+
 }
 
 .product-image{
@@ -115,11 +116,12 @@ margin-left: 100px;
   display: flex;
   justify-content: center;
   margin: 250px 100px 0 -180px;
-  
+  text-decoration: none;
+
 
 }
 
-.button2{
+.button2 {
   
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
