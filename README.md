@@ -47,8 +47,9 @@ Cosme Box
 
 
 # 実装予定の機能
-※今後入力します。
-
+・検索機能(プロフィール情報、cosme情報どちらでも可)
+・消費期限をお知らせしてくれるカレンダー機能
+・cosmeのスターレーティング機能
 
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/533ce1fdc863e708f8840a103f22389f.png)](https://gyazo.com/533ce1fdc863e708f8840a103f22389f)
@@ -58,11 +59,20 @@ Cosme Box
 [![Image from Gyazo](https://i.gyazo.com/2b283054193f5418b4e27701122cb09c.png)](https://gyazo.com/2b283054193f5418b4e27701122cb09c)
 
 # 開発環境
-※今後入力します。
+・フロントエンド
+・バックエンド
+・インフラ
+・テスト
+・テキストエディタ
+・タスク管理
 
 
 # ローカルでの動作方法
-※今後入力します。
+以下のコマンドを順に実行。
+% git clone https://github.com/miurachikaa/cosmebox.git
+% cd cosmebox
+% bundle install
+% yarn install
 
 
 # 工夫したポイント
