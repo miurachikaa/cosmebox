@@ -11,8 +11,8 @@ https://cosmebox.onrender.com/
 
 
 # テスト用アカウント
-・Basic認証パスワード：admin<br>
-・Basic認証ID：2222<br>
+・Basic認証ID：admin<br>
+・Basic認証パスワード：2222<br>
 ・メールアドレス：miura@gmail.com<br>
 ・パスワード：aaa111<br>
 
