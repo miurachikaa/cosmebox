@@ -1,21 +1,29 @@
 <div class="pro">
-          <%= image_tag "Perfume.png", class:"image" %>
-    <div class="product-info">
-      <div class="product-name">
-        <p class="brand">The Face Shop</p>
-        <p class="name"><strong>RICE WATER BRIGHT CLEANSING FOAM</strong></p>
-        <p class="price">¥1200 - 300ml</p>
-        <a href="https://www.naturecollection.com/mall/product/product-view.jsp?dpid=AF006379" class="official" target="_blank">Visit the official store<a/>
+  <div class="blok">
+    <%= image_tag "Perfume.png", class:"image" %>
+    <div class="product-info">    
+      <div class="brand">
+        <%= @item.brand %>
       </div>
-      <div class="product-rank">
-        <i class="fa fa-star fa-2x"></i>
-        <i class="fa fa-star fa-2x"></i>
-        <i class="fa fa-star fa-2x"></i>
-        <i class="fa fa-star fa-2x"></i>
-        <i class="fas fa-star-half-alt fa-2x"></i>
+      <div class="name">
+        <%= @item.name %>
       </div>
-    <button class="button"><strong>Write A Review</strong></button>
+      <div class="border2"></div>
+      <h5>Memo</h5><p>
+      <div class="memo">
+        <%= @item.memo %>
+      </div>
     </div>
+
+    <div class="buttons">
+
+      <button class="button2">
+      
+      <%= button_to "edit", {controller: "items", action: "edit"}, {method: :get }%>
+      </button>
+      <button class="button2"><strong>delete</strong></button>
+    </div>
+  </div>
 </div>
-            
+           
 
