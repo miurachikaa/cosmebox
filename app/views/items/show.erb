@@ -14,19 +14,19 @@
         <%= @item.memo %>
       </div>
     </div>
-
     <div class="buttons">
-
-      <button class="button2"><strong>
-
-        <%= link_to "edit", edit_item_path(@item.id), method: :get, class: "click"%>
-      </strong></button>
-      
-      <button class="button2"><strong>
-      <%= link_to "delete", item_path(@item.id), method: :delete, class: "click"%>
-</strong></button>
+      <button class="button2">
+        <strong>
+          <%= link_to "edit", edit_item_path(@item.id), method: :get, class: "click"%>
+        </strong>
+      </button>      
+      <button class="button2">
+        <strong>
+          <%= link_to "delete", item_path(@item.id), method: :delete, class: "click"%>
+        </strong>
+      </button>
     </div>
   </div>
 </div>
-           
+
 

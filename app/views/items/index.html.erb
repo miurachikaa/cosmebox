@@ -8,7 +8,9 @@
     </div>
   </div>
   <div class="user">
-  <i class="fa fa-user-circle-o fa-2x" style="color: #CBC0D3;"></i>
+  <i class="fa fa-user-circle-o fa-2x" style="color: #CBC0D3;">
+  <%= link_to current_user.nickname, user_path(id: current_user), class: :greeting%>
+  </i>
   </div>
 </header>
 
