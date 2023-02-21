@@ -8,50 +8,49 @@
     </div>
   </div>
   <div class="user">
-  <i class="fa fa-user-circle-o fa-2x" style="color: #CBC0D3;">
-  <%= link_to current_user.nickname, user_path(id: current_user), class: :greeting%>
-  </i>
+    <i class="fa fa-user-circle-o fa-2x" style="color: #CBC0D3;">
+      <%= link_to current_user.nickname, user_path(id: current_user), class: :greeting%>
+    </i>
   </div>
 </header>
 
-  <nav>
-      <div class="dropdown">
-      <a class="dropbtn">Base</a>
-      <div class="dropdown_content">
-        <%= link_to "Foundation", items_foundation_path, method: :get  %>
-
+<nav>
+  <div class="dropdown">
+  <a class="dropbtn">Base</a>
+    <div class="dropdown_content">
+      <%= link_to "Foundation", items_foundation_path, method: :get  %>
         <a div="nav_link">
-        <a href="items/concealer.html">Concealer</a>
+          <a href="items/concealer.html">Concealer</a>
         </a>
         <a div="nav_link">
-        <a href="items/powder.html">Powder</a>
+          <a href="items/powder.html">Powder</a>
         </a>
-      </div>
     </div>
-      <div class="dropdown">
-      <a href="items/eyebrow.html", class="dropbtn">Eyebrow</a>
+  </div>
+  <div class="dropdown">
+    <a href="items/eyebrow.html", class="dropbtn">Eyebrow</a>
+  </div>
+  <div class="dropdown">
+    <a class="dropbtn">Eye</a>
+    <div class="dropdown_content">
+    <a div="nav_link">
+      <a href="items/foundation.html">Eyeliner</a>
+    </a>
+    <a div="nav_link">
+      <a href="items/concealer.html">Eyeshadow</a>
+    </a>
+    <a div="nav_link">
+      <a href="items/powder.html">Mascara</a>
+    </a>
     </div>
-      <div class="dropdown">
-      <a class="dropbtn">Eye</a>
-      <div class="dropdown_content">
-        <a div="nav_link">
-        <a href="items/foundation.html">Eyeliner</a>
-        </a>
-        <a div="nav_link">
-        <a href="items/concealer.html">Eyeshadow</a>
-        </a>
-        <a div="nav_link">
-        <a href="items/powder.html">Mascara</a>
-        </a>
-      </div>
-    </div>
-      <div class="dropdown">
-      <a href="items/lip.html", class="dropbtn">Lip</a>
-    </div>
-      <div class="dropdown">
-      <a href="items/lip.html", class="dropbtn">Cheek</a>
-    </div>
-  </nav>
+  </div>
+  <div class="dropdown">
+    <a href="items/lip.html", class="dropbtn">Lip</a>
+  </div>
+  <div class="dropdown">
+    <a href="items/lip.html", class="dropbtn">Cheek</a>
+  </div>
+</nav>
 
 <section>
   <span>
@@ -59,27 +58,20 @@
   </span>
   <div class="rank">
     <% @items.each do |item| %>
-
-      <div class="products">
-      <%= link_to item_path(item.id) do %>
-
-        <div class="product">
-
-          <%= image_tag "Perfume.png", class:"image" %>
+    <div class="products">
+    <%= link_to item_path(item.id) do %>
+      <div class="product">
+        <%= image_tag "Perfume.png", class:"image" %>
           <div class="brand">
-          <%= item.brand %>
+            <%= item.brand %>
           </div>
           <div class="name">
-          <%= item.name %>
+            <%= item.name %>
           </div>
-
-        </div>
-        <% end %>
-
       </div>
-
     <% end %>
-    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+    </div>
+    <% end %>
   </div>
 </section>
 

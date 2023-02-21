@@ -1,34 +1,57 @@
-<div class="pro">
-  <div class="blok">
-    <div class="product-info">    
-      <div class="nickname">
-        <%= @user.nickname %>
+<div class="probox">
+  <div class="blok2">
+    <div class="product-info2">    
+      <div class="item-title">
+        <h5>Nickname</h5><p>    
+        <div class="user-nickname">
+          <%= @user.nickname %>
+        </div>
       </div>
-      <% if @user.age.present? %>
-
-      <div class="age">
-        <%= @user.age.name %>
+      <div class="border3"></div>
+      <div class="item-title">
+        <h5>Age</h5><p>    
+        <div class="user-age">
+        <% if @user.age.present? %>       
+          <%= @user.age.name %>
+        <% end %>
+        </div>
       </div>
-          <% end %>
-      <div class="age">
-      <% if @user.skin_type.present? %>
-      <div class="skin_type">
-        <%= @user.skin_type.name %>
+      <div class="border3"></div>
+      <div class="item-title">
+        <h5>Skin type</h5><p>    
+        <div class="user-skin-type">
+        <% if @user.skin_type.present? %>       
+          <%= @user.skin_type.name %>
+        <% end %>
+        </div>
       </div>
-                <% end %>
-
+      <div class="border3"></div>
+      <div class="item-title">
+        <h5>Personal color</h5><p>    
+        <div class="user-personal-color">
+        <% if @user.personal_color.present? %>       
+          <%= @user.personal_color.name %>
+        <% end %>
+        </div>
+      </div>
+      <div class="border3"></div>
+      <div class="item-title">
+        <h5>Face type</h5><p>    
+        <div class="user-face-type">
+        <% if @user.face_type.present? %>       
+          <%= @user.face_type.name %>
+        <% end %>
+        </div>
+      </div>
+      <div class="border3"></div>
     </div>
-
-    <div class="buttons">
-
-      <button class="button2"><strong>
-
-        <%= link_to "edit", user_registration_path(@user.id), method: :patct, class: "click"%>
+    <div class="buttons2">
+      <button class="button3 submit2"><strong>
+        <%= link_to "edit", user_registration_path, method: :put, class: "click2"%>
+      </strong></button>     
+      <button class="button3 submit2"><strong>
+        <%= link_to "logauto", destroy_user_session_path, method: :delete, class: "click2"%>
       </strong></button>
-      
-      <button class="button2"><strong>
-      <%= link_to "logauto", destroy_user_session_path(@user.id), method: :delete, class: "click"%>
-</strong></button>
     </div>
   </div>
 </div>

@@ -1,3 +1,18 @@
+$gray: #8E9AAF;
+$lavender: #CBC0D3;
+$pale: #EAC7CC;
+$white: #f6f6f6;
+
+$pink: darken($pale, 20%);
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora');
+
+$sans-serif: 'Open Sans', sans-serif;
+$serif: 'Lora', serif;
+
+
+/*new*/
+
 .box {
   width: 650px;
   height: 500px;
@@ -65,7 +80,7 @@ margin: 0;
 
 
 
-/*index
+/*item/show*/
 /*product*/
 .pro{
   display: flex;
@@ -132,3 +147,130 @@ margin-left: 100px;
   color: black;
   padding: auto;
 }
+
+
+/*user/show*/
+.probox{
+  display: flex;
+  width: 650px;
+  height: 500px;
+  border-radius: 5px;
+  box-shadow: 2px 0 10px rgba(0,0,0,.1);
+  background-color: #EAC7CC;
+  margin: 120px auto;
+  justify-content: center;
+}
+
+.blok2{
+  display: flex;
+}
+
+.product-info2{
+  margin: 80px -60px 50px 100px ;
+}
+
+.item-title{
+  display: flex;
+  align-items: last baseline;
+}
+
+.user-nickname{
+  font-size: 25px;
+  margin-left: 80px;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-family: 'Noto Serif', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  color: #f6f6f6;
+}
+
+.user-age{
+  font-size: 22px;
+  margin-left: 125px;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-family: 'Noto Serif', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  color: #f6f6f6;
+}
+
+.user-skin-type{
+  font-size: 22px;
+  margin-left: 85px;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-family: 'Noto Serif', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  color: #f6f6f6;
+}
+
+.user-personal-color{
+  font-size: 22px;
+  margin-left: 45px;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-family: 'Noto Serif', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  color: #f6f6f6;
+}
+
+.user-face-type{
+  font-size: 22px;
+  margin-left: 85px;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-family: 'Noto Serif', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  color: #f6f6f6;
+}
+
+.border3{
+  border: 1px solid rgba(gray, 0.5);
+  margin: -5px 0 20px -10px ;
+  text-align: center;
+  width: 105%;  
+}
+
+.buttons2{
+  display: flex;
+  justify-content: flex-end;
+  margin: 300px 90px 0 -180px;
+}
+
+.button3{
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  outline: none;
+  margin-left: 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.click2{
+  text-decoration: none;
+  color: black;
+  padding: auto;
+}
+
+.submit2 {
+  padding: 12px;
+  border-color: gray;
+  &:hover {
+    background: $lavender;
+    border-color: darken($lavender, 5%);
+  }
+}
+
