@@ -11,7 +11,7 @@ $sans-serif: 'Open Sans', sans-serif;
 $serif: 'Lora', serif;
 
 
-/*new*/
+/*items/new*/
 
 .box {
   width: 650px;
@@ -25,7 +25,7 @@ $serif: 'Lora', serif;
   justify-content: center;
 }  
 
-h2 {
+h2.pink {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   text-transform: uppercase;
@@ -33,6 +33,16 @@ h2 {
   font-size: 2em;
   letter-spacing: 8px;
 }
+
+h2.salmonpink {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(209, 113, 129);
+  font-size: 2em;
+  letter-spacing: 8px;
+}
+
 
 h5 {
   margin: 15px 0 0 0;
@@ -80,7 +90,7 @@ margin: 0;
 
 
 
-/*item/show*/
+/*items/show*/
 /*product*/
 .pro{
   display: flex;
@@ -149,7 +159,7 @@ margin-left: 100px;
 }
 
 
-/*user/show*/
+/*users/show*/
 .probox{
   display: flex;
   width: 650px;
@@ -166,7 +176,7 @@ margin-left: 100px;
 }
 
 .product-info2{
-  margin: 80px -60px 50px 100px ;
+  margin: 20px -60px 50px 100px ;
 }
 
 .item-title{
@@ -244,7 +254,7 @@ margin-left: 100px;
 .buttons2{
   display: flex;
   justify-content: flex-end;
-  margin: 300px 90px 0 -180px;
+  margin: 350px 90px 0 -180px;
 }
 
 .button3{
@@ -274,3 +284,19 @@ margin-left: 100px;
   }
 }
 
+
+/*users/edit*/
+.outoline{
+  margin-top: 15px;
+  align-content: center;
+}
+
+.selectbox2{
+  width: 99%;
+  height: 25px;
+  margin: 0 -17px 0 5px;
+  color: grey;
+  font-size: 12px;
+  cursor: pointer;
+
+}

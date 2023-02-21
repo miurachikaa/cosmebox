@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {registrations: 'user/registrations' }
+  get "users/show" => "users#show"
   root to: 'items#index'
   resources :items do
   end
   
-  resources :users, only: :show
+  resources :users, only: [:show, :edit, :update]
 
   get "items/foundation"
   get "items/concealer"

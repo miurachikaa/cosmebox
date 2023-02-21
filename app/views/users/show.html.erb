@@ -1,6 +1,7 @@
 <div class="probox">
   <div class="blok2">
-    <div class="product-info2">    
+    <div class="product-info2">
+      <h2 class = "salmonpink">Edit account</h2>    
       <div class="item-title">
         <h5>Nickname</h5><p>    
         <div class="user-nickname">
@@ -47,7 +48,7 @@
     </div>
     <div class="buttons2">
       <button class="button3 submit2"><strong>
-        <%= link_to "edit", user_registration_path, method: :put, class: "click2"%>
+        <%= link_to "edit", edit_user_path(@user.id), method: :get, class: "click2"%>
       </strong></button>     
       <button class="button3 submit2"><strong>
         <%= link_to "logauto", destroy_user_session_path, method: :delete, class: "click2"%>

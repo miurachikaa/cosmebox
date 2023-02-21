@@ -15,4 +15,5 @@ class User < ApplicationRecord
   belongs_to :personal_color
   belongs_to :face_type
   
+  
 end
