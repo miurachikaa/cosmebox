@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :items
 
   validates :nickname, presence: true
-  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }, allow_blank: true
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :age

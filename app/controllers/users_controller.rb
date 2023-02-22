@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+
   def show
     @user = User.find(params[:id])
-
   end
 
   def edit
@@ -12,11 +13,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.id == current_user.id 
       @user.update(user_params)
-    end
-    unless @user.save
+      redirect_to user_path(@user.id)
+    else
       render :edit
     end 
   end
+
 
   private
 
