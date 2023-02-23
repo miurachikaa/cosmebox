@@ -1,0 +1,44 @@
+<%= search_form_for @q, url: search_users_path, html: {id: "detailed-search-form"} do |f| %>
+    <div class="search-field">
+      <%= f.label :age_id_eq, 'Age' %>
+      <br>
+      <%= f.collection_select(:age_id_eq, Age.all, :id, :name, {}) %>
+    </div>
+    <div class="search-field">
+      <%= f.label :skin_type_id_eq, 'Skin type' %>
+      <br>
+      <%= f.collection_select(:skin_type_id_eq, SkinType.all, :id, :name, {}) %>
+    </div>
+    <div class="search-field">
+      <%= f.label :personal_color_id_eq, 'Personal color' %>
+      <br>
+      <%= f.collection_select(:personal_color_id_eq, PersonalColor.all, :id, :name, {}) %>
+    </div>
+    <div class="search-field">
+      <%= f.label :face_type_id_eq, 'Face type' %>
+      <br>
+      <%= f.collection_select(:face_type_id_eq, FaceType.all, :id, :name, {}) %>
+    </div>
+    <%= f.submit '検索' %>
+    <% end %>
+
+      
+  <div class="rank">
+  <% @users.each do |user| %>
+    <div class="products">
+    <%= link_to user_path(user.id) do %>
+      <div class="product">
+      <%= image_tag "usericon.png", class:"image2" %>
+        <div class="brand">
+        <%= user.nickname %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+   
+     <% end %>
+        </div>
+
+
+
+

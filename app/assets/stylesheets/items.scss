@@ -3,6 +3,17 @@
 * 引用元:CODEPEN
 * by Katheryn
 * ========================================================================== */
+$gray: #8E9AAF;
+$lavender: #CBC0D3;
+$pale: #EAC7CC;
+$white: #f6f6f6;
+
+$pink: darken($pale, 20%);
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora');
+
+$sans-serif: 'Open Sans', sans-serif;
+$serif: 'Lora', serif;
 
 
 body {
@@ -25,14 +36,14 @@ header{
 }
 
 .search {
-  width: 100%;
+  width: 250%;
   position: relative;
   display: flex;
-  left: -10%;
+  left: -15%;
   }
 
 .searchTerm {
-  width: 30%;
+  width: 120px;
   border: 1px solid #CBC0D3;
   border-right: none;
   padding: 5px;
@@ -47,19 +58,22 @@ header{
 }
 
 .searchButton {
-  width: 10%;
+  width: 55px;
   height: 32px;
   border: 1px solid #CBC0D3;
   background: #ffff;
-  text-align: center;
   color: #CBC0D3;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
-  font-size: 20px;
-  padding:0 0 15px 0;
+  font-size: 15px;
   transform: translate(-30%);
-  right: 0%;
+  margin: 0 0 0 115px;
+  padding: 0 5px 0 3px;
+  &:hover {
+    background: #CBC0D3;
+    color: #ffff;
 
+  }
 }
 
 .wrap{
@@ -72,21 +86,17 @@ header{
 
 .user{
   position: absolute;
-  top: 23px;
+  top: 20px;
   right: 2%;
 }
 
 .greeting{
-  font-size: 20px;
+  font-size: 18px;
   color: #CBC0D3;
   text-decoration: none;
   font-weight: bold;
-
 }
 
-
-
-/*Navigation*/
 nav{
   display: flex;
   background-color: #ffff;
@@ -164,7 +174,6 @@ section{
 }
 
     
-/*RANKING*/
 .btn{
   cursor:pointer;
     position:relative;
@@ -221,6 +230,7 @@ section{
   justify-content: flex-start;
   padding: 0 100px;
   flex-wrap: wrap;
+  margin-left: -20px;
 }
 
 
@@ -228,7 +238,7 @@ section{
   display: flex;
   text-align: center;
   display: block;
-  margin: 44px;
+  margin: 50px;
   padding: 10px;
   background-color: #fceeed;
   height: 320px;
