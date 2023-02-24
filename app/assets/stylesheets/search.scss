@@ -3,3 +3,18 @@
   margin: 40px 0 ;
 }
 
+.box-a{
+  width: 650px;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 2px 0 10px rgba(0,0,0,.1);
+  background-color: #f6f6f6;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-a{
+  justify-content: center;
+}
