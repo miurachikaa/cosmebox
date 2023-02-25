@@ -74,7 +74,7 @@ body {
 }
 
 /* font & button styling */
-h1 {
+h1.inup {
   font-family: $sans-serif;
   text-align: center;
   margin-top: 63px;
@@ -152,6 +152,7 @@ button {
   background: $white;
   color: $pink;
   border: solid 1px $pale;
+  cursor: pointer;
 }
 
 /* form styling */
@@ -160,6 +161,7 @@ button {
   margin-top: 25px;
   padding: 12px;
   border-color: $pink;
+  cursor: pointer;
   &:hover {
     background: $lavender;
     border-color: darken($lavender, 5%);

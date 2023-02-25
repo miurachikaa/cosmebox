@@ -1,20 +1,24 @@
+<div class="rogoback">  
+  <h1 class = "rogo"><%= link_to "Cosme Box", root_path, class:"rogo"%></h1>
+</div>
+
 <div class="box-a" >
   <div class="content-a" >
     <h2 class = "pink">search user</h2>
     <%= search_form_for @q, url: search_users_path do |f| %>
       <div class="search-field">
-        <%= f.collection_select(:age_id_eq, Age.all, :id, :name, include_hidden: false) %>
+        <%= f.collection_select(:age_id_eq, Age.where.not(id: 1), :id, :name, {include_blank: "Age"}, {class:"select-box2"}) %>
       </div>
       <div class="search-field">
-        <%= f.collection_select(:skin_type_id_eq, SkinType.all, :id, :name, include_hidden: false) %>
+        <%= f.collection_select(:skin_type_id_eq, SkinType.where.not(id: 1), :id, :name, {include_blank: "Skin type"}, {class:"select-box2"}) %>
       </div>
       <div class="search-field">
-        <%= f.collection_select(:personal_color_id_eq, PersonalColor.all, :id, :name, include_hidden: false) %>
+        <%= f.collection_select(:personal_color_id_eq, PersonalColor.where.not(id: 1), :id, :name, {include_blank: "Personal color"}, {class:"select-box2"}) %>
       </div>
       <div class="search-field">
-        <%= f.collection_select(:face_type_id_eq, FaceType.all, :id, :name, include_hidden: false) %>
+        <%= f.collection_select(:face_type_id_eq, FaceType.where.not(id: 1), :id, :name, {include_blank: "Face type"}, {class:"select-box2"}) %>
       </div>
-      <%= f.submit '検索' %>
+          <button class="button submit">search</button>
     <% end %>
   </div>
 </div>
@@ -33,7 +37,6 @@
     </div> 
   <% end %>
 </div>
-
 
 
 

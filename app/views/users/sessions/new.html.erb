@@ -2,7 +2,7 @@
   <div class="welcome">
     <div class="pinkbox" >
       <div class="signup nodisplay">
-        <h1>register</h1>
+        <h1 class="inup">register</h1>
         <%= form_with model: @user, url: user_registration_path, method: :post, local: true do |f| %>
         <div class="input">
           <span class="required">*</span><%= f.text_field :nickname, id:"nickname", placeholder:"nickname" %>
@@ -28,12 +28,11 @@
         <div class="input">
           <%= f.collection_select(:Face_type_id, FaceType.all, :id, :name, {}, {class:"select-box"}) %>
         </div>
-
           <button class="button submit">logincreate account</button>
         <% end %>
       </div>
       <div class="signin">
-        <h1>signin</h1>
+        <h1 class="inup">signin</h1>
         <%= form_with model: @user, url: user_session_path, method: :post, local: true do |f| %>
         <div class="input">
           <%= f.text_field :email, id:"email", placeholder:"email" %>
