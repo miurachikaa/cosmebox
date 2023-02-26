@@ -18,8 +18,10 @@
         <%= @item.memo %>
       </div>
     </div>
+    
+    <% if current_user.id == @item.user_id %>
     <div class="buttons">
-      <button class="button2">
+      <button class="button2">      
         <strong>
           <%= link_to "edit", edit_item_path(@item.id), method: :get, class: "click"%>
         </strong>
@@ -30,6 +32,15 @@
         </strong>
       </button>
     </div>
+    <% else %>
+    <div class="buttons">
+      <button class="button4">      
+        <strong>
+          <%= link_to "user search", search_users_path, method: :get, class: "click"%>
+        </strong>
+      </button>      
+    </div>
+    <% end %>
   </div>
 </div>
 

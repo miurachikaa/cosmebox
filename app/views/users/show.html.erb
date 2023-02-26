@@ -2,7 +2,7 @@
   <h1 class = "rogo"><%= link_to "Cosme Box", root_path, class:"rogo"%></h1>
 </div>
 
-<div class="probox">
+<div class="probox2">
   <div class="blok2">
     <div class="product-info2">
       <h2 class = "salmonpink">Edit account</h2>    
@@ -50,6 +50,7 @@
       </div>
       <div class="border3"></div>
     </div>
+    <% if current_user.id == @user.id %>
     <div class="buttons2">
       <button class="button3 submit2"><strong>
         <%= link_to "edit", edit_user_path(@user.id), method: :get, class: "click2"%>
@@ -58,5 +59,29 @@
         <%= link_to "logauto", destroy_user_session_path, method: :delete, class: "click2"%>
       </strong></button>
     </div>
+    <% else %>
+      <button class="button5"><strong>
+        <%= link_to "user search", search_users_path, method: :get, class: "click2"%>
+      </strong></button>     
+    </div>
+    <% end %>
   </div>
 </div>
+
+  <div class="rank">
+    <% @items.each do |item| %>
+    <div class="products">
+    <%= link_to item_path(item.id) do %>
+      <div class="product">
+        <%= image_tag "Perfume.png", class:"image" %>
+          <div class="brand">
+            <%= item.brand %>
+          </div>
+          <div class="name">
+            <%= item.name %>
+          </div>
+      </div>
+    <% end %>
+    </div>
+    <% end %>
+  </div>

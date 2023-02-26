@@ -18,7 +18,7 @@
       <div class="search-field">
         <%= f.collection_select(:face_type_id_eq, FaceType.where.not(id: 1), :id, :name, {include_blank: "Face type"}, {class:"select-box2"}) %>
       </div>
-          <button class="button submit">search</button>
+        <button class="button submit">search</button>
     <% end %>
   </div>
 </div>
