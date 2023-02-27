@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   root to: 'items#index'
   resources :items do
+    collection do
+      get 'category'
+    end
   end
 
   resources :users, only: [:show, :edit, :update, :destroy] do
@@ -10,15 +13,5 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-
-  get "items/foundation"
-  get "items/concealer"
-  get "items/powder"
-  get "items/eyebrow"
-  get "items/eyeliner"
-  get "items/eyeshadow"
-  get "items/mascara"
-  get "items/lip"
-  get "items/cheek"
 
 end

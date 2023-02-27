@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   before_action :prevent_url, only: [:edit, :destroy]
 
   def index
-    @items = Item.includes(:user).order("created_at DESC")
+    @items = current_user.items.all.order("created_at DESC")
   end
 
   def new
@@ -21,8 +21,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @foundation = items_foundation_path
-
   end
 
   def edit
@@ -39,6 +37,10 @@ class ItemsController < ApplicationController
   def destroy
     @item.destroy
     redirect_to root_path
+  end
+
+  def category
+    @items = current_user.items.where(category_id: params[:category_id]).order(created_at: :desc)  
   end
 
   private

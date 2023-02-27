@@ -8,4 +8,8 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
 
+  def self.category
+    Item.where(category_id: @category )
+  end
+
 end

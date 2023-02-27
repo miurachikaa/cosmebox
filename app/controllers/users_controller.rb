@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user, only: [:show, :edit, :update]
-  before_action :prevent_url, only: [:edit]
 
   def show
     @items = @user.items.includes(:user)
@@ -34,9 +33,4 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def prevent_url
-    if @user_id != current_user.id
-      redirect_to root_path
-    end
-  end
 end

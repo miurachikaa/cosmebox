@@ -10,39 +10,39 @@
 
 <nav>
   <div class="dropdown">
-  <a class="dropbtn">Base</a>
+    <a class="dropbtn">Base</a>
     <div class="dropdown_content">
-      <%= link_to "Foundation", items_foundation_path, method: :get  %>
-        <a div="nav_link">
-          <a href="items/concealer.html">Concealer</a>
-        </a>
-        <a div="nav_link">
-          <a href="items/powder.html">Powder</a>
-        </a>
+      <%= link_to "Foundation", category_items_path(category_id:"2") %>
+    <a div="nav_link">
+      <%= link_to "Concealer", category_items_path(category_id:"3") %>
+    </a>
+    <a div="nav_link">
+      <%= link_to "Powder", category_items_path(category_id:"4") %>
+    </a>
     </div>
   </div>
   <div class="dropdown">
-    <a href="items/eyebrow.html", class="dropbtn">Eyebrow</a>
+    <%= link_to "Eyebrow", category_items_path(category_id:"5"), class:"dropbtn" %>
   </div>
   <div class="dropdown">
     <a class="dropbtn">Eye</a>
     <div class="dropdown_content">
     <a div="nav_link">
-      <a href="items/foundation.html">Eyeliner</a>
+      <%= link_to "Eyeliner", category_items_path(category_id:"6") %>
     </a>
     <a div="nav_link">
-      <a href="items/concealer.html">Eyeshadow</a>
+      <%= link_to "Eyeshadow", category_items_path(category_id:"7") %>
     </a>
     <a div="nav_link">
-      <a href="items/powder.html">Mascara</a>
+      <%= link_to "Mascara", category_items_path(category_id:"8") %>    
     </a>
     </div>
   </div>
   <div class="dropdown">
-    <a href="items/lip.html", class="dropbtn">Lip</a>
+    <%= link_to "Lip", category_items_path(category_id:"9"), class:"dropbtn" %>
   </div>
   <div class="dropdown">
-    <a href="items/lip.html", class="dropbtn">Cheek</a>
+    <%= link_to "Cheek", category_items_path(category_id:"10"), class:"dropbtn" %>
   </div>
 </nav>
 
