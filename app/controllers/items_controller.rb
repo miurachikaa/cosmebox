@@ -5,6 +5,15 @@ class ItemsController < ApplicationController
 
   def index
     @items = current_user.items.all.order("created_at DESC")
+    @foundation = Category.find(2)
+    @concealer = Category.find(3)
+    @powder = Category.find(4)
+    @eyebrow = Category.find(5)
+    @eyeliner = Category.find(6)
+    @eyeshadow = Category.find(7)
+    @mascara = Category.find(8)
+    @lip = Category.find(9)
+    @cheek = Category.find(10)
   end
 
   def new
@@ -21,6 +30,15 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @foundation = Category.find(2)
+    @concealer = Category.find(3)
+    @powder = Category.find(4)
+    @eyebrow = Category.find(5)
+    @eyeliner = Category.find(6)
+    @eyeshadow = Category.find(7)
+    @mascara = Category.find(8)
+    @lip = Category.find(9)
+    @cheek = Category.find(10) 
   end
 
   def edit
@@ -41,6 +59,15 @@ class ItemsController < ApplicationController
 
   def category
     @items = current_user.items.where(category_id: params[:category_id]).order(created_at: :desc)  
+    @foundation = Category.find(2)
+    @concealer = Category.find(3)
+    @powder = Category.find(4)
+    @eyebrow = Category.find(5)
+    @eyeliner = Category.find(6)
+    @eyeshadow = Category.find(7)
+    @mascara = Category.find(8)
+    @lip = Category.find(9)
+    @cheek = Category.find(10) 
   end
 
   private

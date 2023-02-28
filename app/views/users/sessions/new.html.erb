@@ -2,8 +2,8 @@
   <div class="welcome">
     <div class="pinkbox" >
 
-      <%= render 'shared/error_messages', model:@item  %>
-      
+      <%= render 'shared/error_messages', model:@user  %>
+
       <div class="signup nodisplay">
         <h1 class="inup">register</h1>
         <%= form_with model: @user, url: user_registration_path, method: :post, local: true do |f| %>

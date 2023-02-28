@@ -4,6 +4,16 @@ class UsersController < ApplicationController
 
   def show
     @items = @user.items.includes(:user)
+    @foundation = Category.find(2)
+    @concealer = Category.find(3)
+    @powder = Category.find(4)
+    @eyebrow = Category.find(5)
+    @eyeliner = Category.find(6)
+    @eyeshadow = Category.find(7)
+    @mascara = Category.find(8)
+    @lip = Category.find(9)
+    @cheek = Category.find(10) 
+
   end
 
   def edit

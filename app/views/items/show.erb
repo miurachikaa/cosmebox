@@ -4,7 +4,25 @@
 
 <div class="pro">
   <div class="blok">
-    <%= image_tag "Perfume.png", class:"image" %>
+    <% if @item.category == @foundation %>
+      <%= image_tag "foundation.png", class:"image" %>
+    <% elsif @item.category == @concealer %>
+      <%= image_tag "concealer.png", class:"image" %>
+    <% elsif @item.category == @powder %>
+      <%= image_tag "powder.png", class:"image" %>
+    <% elsif @item.category == @eyebrow %>
+      <%= image_tag "Perfume.png", class:"image" %>
+    <% elsif @item.category == @eyeliner %>
+      <%= image_tag "eyeliner.png", class:"image" %>
+    <% elsif @item.category == @eyeshadow %>
+      <%= image_tag "eyeshadow.png", class:"image" %>
+    <% elsif @item.category == @mascara %>
+      <%= image_tag "mascara.png", class:"image" %>
+    <% elsif @item.category == @lip %>
+      <%= image_tag "lip.png", class:"image" %>
+    <% elsif @item.category == @cheek %>
+      <%= image_tag "cheek.png", class:"image" %>
+    <% end %>
     <div class="product-info">    
       <div class="brand">
         <%= @item.brand %>
@@ -18,7 +36,7 @@
         <%= @item.memo %>
       </div>
     </div>
-    
+
     <% if current_user.id == @item.user_id %>
     <div class="buttons">
       <button class="button2">      
