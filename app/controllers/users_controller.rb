@@ -13,7 +13,6 @@ class UsersController < ApplicationController
     @mascara = Category.find(8)
     @lip = Category.find(9)
     @cheek = Category.find(10) 
-
   end
 
   def edit
