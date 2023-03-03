@@ -16,28 +16,36 @@
       <div class="item-title">
         <h5>Age</h5><p>    
         <div class="user-age">
-          <%= @user.age %>
+        <% if @user.age.present? %>
+          <%= @user.age.name %>
+        <% end %>
         </div>
       </div>
       <div class="border3"></div>
       <div class="item-title">
         <h5>Skin type</h5><p>    
         <div class="user-skin-type">
-          <%= @user.skin_type %>
+        <% if @user.skin_type.present? %>
+          <%= @user.skin_type.name %>
+        <% end %>
         </div>
       </div>
       <div class="border3"></div>
       <div class="item-title">
         <h5>Personal color</h5><p>    
         <div class="user-personal-color">
-          <%= @user.personal_color %>
+        <% if @user.personal_color.present? %>
+          <%= @user.personal_color.name %>
+        <% end %>
         </div>
       </div>
       <div class="border3"></div>
       <div class="item-title">
         <h5>Face type</h5><p>    
         <div class="user-face-type">
-          <%= @user.face_type %>
+        <% if @user.face_type.present? %>
+          <%= @user.face_type.name %>
+        <% end %>
         </div>
       </div>
       <div class="border3"></div>

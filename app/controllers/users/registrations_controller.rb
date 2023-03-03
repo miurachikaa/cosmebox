@@ -3,6 +3,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_account_update_params, only: [:update]
 
   def new
+    def new
+      @user = user.where('age_id IN(?)', params[:age_id])
     super
   end
 
