@@ -6,6 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     def new
       @user = user.where('age_id IN(?)', params[:age_id])
     super
+    end
   end
 
   def create
