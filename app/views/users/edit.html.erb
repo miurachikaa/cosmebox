@@ -2,36 +2,34 @@
   <h1 class = "rogo"><%= link_to "Cosme Box", root_path, class:"rogo"%></h1>
 </div>
 
-
-
 <%= form_with model: @user, local: true do |f| %>
-  <div class="probox" >
-    <div class="outoline" >
-      <h2 class = "salmonpink">Edit account</h2>
-      <div class="cosmeinfo">
-        <h5>Nickname</h5><p>
-        <div class="inputbox">
-          <span class="required">*</span><%= f.text_field :nickname, id:"nickname",class:"selectb"%>
-        </div>
-        <h5>Age</h5><p>
-        <div class="input">
-          <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"selectbox2"}) %>
-        </div>
-        <h5>Skin type</h5><p>
-        <div class="input">
-          <%= f.collection_select(:skin_type_id, SkinType.all, :id, :name, {}, {class:"selectbox2"}) %>
-        </div>
-        <h5>Personal color</h5><p>
-        <div class="input">
-          <%= f.collection_select(:personal_color_id, PersonalColor.all, :id, :name, {}, {class:"selectbox2"}) %>
-        </div>
-        <h5>Face type</h5><p>
-        <div class="input">
-          <%= f.collection_select(:face_type_id, FaceType.all, :id, :name, {}, {class:"selectbox2"}) %>
-        </div>
-
-        <button class="button submit">account update</button>
+<div class="probox" >
+  <div class="outoline" >
+    <h2 class = "salmonpink">Edit account</h2>
+    <div class="cosmeinfo">
+      <h5>Nickname</h5><p>
+      <div class="inputbox">
+        <span class="required">*</span><%= f.text_field :nickname, id:"nickname",class:"selectb"%>
       </div>
+      <h5>Age</h5><p>
+      <div class="input">
+        <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"selectbox2"}) %>
+      </div>
+      <h5>Skin type</h5><p>
+      <div class="input">
+        <%= f.collection_select(:skin_type_id, SkinType.all, :id, :name, {}, {class:"selectbox2"}) %>
+      </div>
+      <h5>Personal color</h5><p>
+      <div class="input">
+        <%= f.collection_select(:personal_color_id, PersonalColor.all, :id, :name, {}, {class:"selectbox2"}) %>
+      </div>
+      <h5>Face type</h5><p>
+      <div class="input">
+        <%= f.collection_select(:face_type_id, FaceType.all, :id, :name, {}, {class:"selectbox2"}) %>
+      </div>
+
+      <button class="button submit">account update</button>
     </div>
   </div>
+</div>
 <% end %>

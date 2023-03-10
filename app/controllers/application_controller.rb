@@ -6,8 +6,6 @@ class ApplicationController < ActionController::Base
     user_session_path
   end
 
-
-
   private
 
   def basic_auth

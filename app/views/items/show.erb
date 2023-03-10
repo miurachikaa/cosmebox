@@ -23,42 +23,41 @@
     <% elsif @item.category == @cheek %>
       <%= image_tag "cheek.png", class:"image" %>
     <% end %>
-    <div class="product-info">    
-      <div class="brand">
-        <%= @item.brand %>
-      </div>
-      <div class="name">
-        <%= @item.name %>
-      </div>
-      <div class="border2"></div>
-      <h5>Memo</h5><p>
-      <div class="memo">
-        <%= @item.memo %>
-      </div>
+  <div class="product-info">    
+    <div class="brand">
+      <%= @item.brand %>
     </div>
-
-    <% if current_user.id == @item.user_id %>
-    <div class="buttons">
-      <button class="button2">      
-        <strong>
-          <%= link_to "edit", edit_item_path(@item.id), method: :get, class: "click"%>
-        </strong>
-      </button>      
-      <button class="button2">
-        <strong>
-          <%= link_to "delete", item_path(@item.id), method: :delete, class: "click"%>
-        </strong>
-      </button>
+    <div class="name">
+      <%= @item.name %>
     </div>
-    <% else %>
-    <div class="buttons">
-      <button class="button4">      
-        <strong>
-          <%= link_to "user search", search_users_path, method: :get, class: "click"%>
-        </strong>
-      </button>      
+    <div class="border2"></div>
+    <h5>Memo</h5><p>
+    <div class="memo">
+      <%= @item.memo %>
     </div>
-    <% end %>
+  </div>
+  <% if current_user.id == @item.user_id %>
+  <div class="buttons">
+    <button class="button2">      
+      <strong>
+        <%= link_to "edit", edit_item_path(@item.id), method: :get, class: "click"%>
+      </strong>
+    </button>      
+    <button class="button2">
+      <strong>
+        <%= link_to "delete", item_path(@item.id), method: :delete, class: "click"%>
+      </strong>
+    </button>
+  </div>
+  <% else %>
+  <div class="buttons">
+    <button class="button4">      
+      <strong>
+        <%= link_to "user search", search_users_path, method: :get, class: "click"%>
+      </strong>
+    </button>      
+  </div>
+  <% end %>
   </div>
 </div>
 
