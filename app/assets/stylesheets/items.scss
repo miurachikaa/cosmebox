@@ -18,7 +18,6 @@ $serif: 'Lora', serif;
 
 body {
   margin: 0;
-  position: relative;
   }
 
 a{
@@ -226,6 +225,7 @@ section{
   padding: 0 100px;
   flex-wrap: wrap;
   margin-left: -10px;
+  position: relative;
 }
 
 
@@ -236,7 +236,7 @@ section{
   margin:46px;
   padding: 10px;
   background-color: #fceeed;
-  height: 320px;
+  height: 350px;
   width: 300px;
   cursor: pointer;
 }
@@ -253,6 +253,14 @@ section{
   width: 180px;
   margin-top: 10px;
 }
+.category{
+  overflow-wrap: normal;
+  font-family: 'Open Sans', sans-serif;
+  color: #EAC7CC;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 20px;
+}
 
 .brand{
   overflow-wrap: normal;
@@ -260,7 +268,7 @@ section{
   color: #7c8089;
   font-size: 13px;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 8px;
 }
 
 .name{
@@ -269,7 +277,7 @@ section{
   color: white;
   font-size: 120%;
   -webkit-text-stroke: 1px #7c8089;
-  margin-top: 5px;
+  margin-top: 8px;
   line-height: 120%;
   overflow-wrap: break-word;
   word-break: keep-all;
@@ -289,7 +297,7 @@ h6{
   color: #bca4cd;
   display: block;
   text-align: right;
-  position: absolute; 
   right: 5px;
   bottom: 0;
+  position: absolute;
 }

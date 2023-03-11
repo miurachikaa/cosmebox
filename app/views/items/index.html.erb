@@ -74,6 +74,9 @@
         <% elsif item.category == @cheek %>
           <%= image_tag "cheek.png", class:"image" %>
         <% end %>
+        <div class="category">
+          <%= item.category.name %>
+        </div>
         <div class="brand">
           <%= item.brand %>
         </div>
