@@ -44,4 +44,3 @@ button.onclick = butotnClick;
 
 bannerSlide.addEventListener('transitionend', transition);
 
-
